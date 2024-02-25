@@ -1,5 +1,4 @@
-# gdb_example
-The goal of the code/information in this repository is to explain how to use GDB at a very simple level.
+The goal of the code/information in this directory is to explain how to use GDB at a very simple level.
 Here, "very simple level" means that the user-developer/student should be able to:
 * Run a toy example with a straightfoward but simple segfault
 * Run a toy example with straightforward "steps" (i.e. step through)
@@ -105,4 +104,14 @@ Aside: The gdb-dashboard developer says `pygments` is necessary for syntax highl
 
 Now (*in your home directory*) run
 `wget -P ~ https://github.com/cyrus-and/gdb-dashboard/raw/master/.gdbinit`
+Then just repeat "2. Running a GDB Script" and you should see that now a detailed menu appears with each `next` call.
+
+# Troubleshooting for root
+One last note: sometimes code of interest needs to be run as root (example: https://github.com/siewertsmooc/RTES-ECEE-5623/blob/main/simplethread-affinity/pthread.c)
+Depending on your shell config(s), gdb-dashboard may not necessarily "just work" in root/sudo.
+To make things brief: you should do this:
+* `sudo -s`
+* `cd $(echo ~root)`
+* `ls -la` and confirm you can see `.bashrc`; note: this directory is essentially the "home" of the root user. So you can consider that in the same way it has a `.bashrc` distinct from the home user, it too has a distinctive `.gdbinit` file so we can easily install it for `root`.
+* `wget -P ~ https://github.com/cyrus-and/gdb-dashboard/raw/master/.gdbinit`
 Then just repeat "2. Running a GDB Script" and you should see that now a detailed menu appears with each `next` call.

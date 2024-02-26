@@ -36,7 +36,7 @@ I figured it should not be hard to make a simple switch-case function and step t
 13.
 14.  switch(current_step)
 15.  {
-16.    case 0: step(current_step); current_step++;
+16.    case 0: step(current_step); current_step++; //break statements are missing on purpose so that "we're sure" the breakpoints are really working
 17.    case 1: step(current_step); current_step++;
 18.    case 2: step(current_step); current_step++;
 19.    case 3: step(current_step);

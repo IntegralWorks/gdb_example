@@ -116,3 +116,22 @@ To make things brief: you should do this:
 * `ls -la` and confirm you can see `.bashrc`; note: this directory is essentially the "home" of the root user. So you can consider that in the same way it has a `.bashrc` distinct from the home user, it too has a distinctive `.gdbinit` file so we can easily install it for `root`.
 * `wget -P ~ https://github.com/cyrus-and/gdb-dashboard/raw/master/.gdbinit`
 Then just repeat "2. Running a GDB Script" and you should see that now a detailed menu appears with each `next` call.
+
+# Can AI do this for us?
+Sort of. At this point I realized I knew enough about GDB to test AI output.
+I fed it these prompts: https://chat.openai.com/share/9ae0a8cf-43c5-4f71-880f-b8c0842901f1
+and then combined the output of the prompts with the knowledge documented here to come up with set_breakpoints_gpt.gdb and set_breakpoints_gpt_looped.gdb. You can run these directly with 
+`gdb -x set_breakpoints_gpt_looped.gdb`
+Insights:
+* It's a good idea to try to do things manually at first 
+    * I would have had zero clue at all how to ask ChatGPT how to write what was needed
+* Intuitively, GDB command files can have the file extension `.gdb`
+* You can run a command file directly with the `-x` option
+    * Formal source: 
+        * `man gdb` yields no manual; consulting https://stackoverflow.com/questions/23684642/how-to-fix-no-manual-entry-for-gcc inspires
+        * `sudo apt install gdb-doc -y`
+        * Then try `man gdb` again. (also consult https://unix.stackexchange.com/questions/767480/how-do-i-add-line-numbers-to-the-man-page)
+        * Line 116: -x <u>file</u> 
+        Execute GDB commands from file
+* You can specify line numbers like this: *<source_code>*.c:*<line_number>*
+    * This was tricker to track down. https://sourceware.org/gdb/current/onlinedocs/gdb.html/Source-Path.html is a good source and https://alex.dzyoba.com/blog/gdb-source-path/ could be a decent explanation.

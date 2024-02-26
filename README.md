@@ -124,8 +124,8 @@ and then combined the output of the prompts with the knowledge documented here t
 `gdb -x set_breakpoints_gpt_looped.gdb`
 
 Insights:
-* It's a good idea to try to do things manually at first 
-    * Had I not, **I would have had zero clue at all how to ask ChatGPT how to write what was needed.**
+* It's a good idea to do things manually at first 
+    * Had I not, **I would have had zero clue at all how to ask ChatGPT how to write what was needed.** I consider details even like how a `.gdb` file is technically not a "script" but rather a "command file" (one scripts within the command file[s]) important to clarify things.
 * Intuitively, GDB command files can have the file extension `.gdb`
 * You can run a command file directly with the `-x` option
     * Formal source: 

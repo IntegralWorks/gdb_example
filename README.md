@@ -122,6 +122,7 @@ Sort of. At this point I realized I knew enough about GDB to test AI output.
 I fed it these prompts: https://chat.openai.com/share/9ae0a8cf-43c5-4f71-880f-b8c0842901f1
 and then combined the output of the prompts with the knowledge documented here to come up with `set_breakpoints_gpt.gdb` and `set_breakpoints_gpt_looped.gdb`. You can run these directly with 
 `gdb -x set_breakpoints_gpt_looped.gdb`
+
 Insights:
 * It's a good idea to try to do things manually at first 
     * I would have had zero clue at all how to ask ChatGPT how to write what was needed

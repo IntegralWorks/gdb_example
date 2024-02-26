@@ -1,5 +1,5 @@
 # gdb_example
-The goal of the code/information in this directory is to explain how to use GDB at a very simple level.
+The goal of the code/information in this repository is to explain how to use GDB at a very simple level.
 Here, "very simple level" means that the user-developer/student should be able to:
 * Run a toy example with a straightfoward but simple segfault
 * Run a toy example with straightforward "steps" (i.e. step through)

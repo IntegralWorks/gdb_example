@@ -125,7 +125,7 @@ and then combined the output of the prompts with the knowledge documented here t
 
 Insights:
 * It's a good idea to try to do things manually at first 
-    * I would have had zero clue at all how to ask ChatGPT how to write what was needed
+    * Had I not, **I would have had zero clue at all how to ask ChatGPT how to write what was needed.**
 * Intuitively, GDB command files can have the file extension `.gdb`
 * You can run a command file directly with the `-x` option
     * Formal source: 

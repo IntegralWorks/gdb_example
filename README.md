@@ -134,5 +134,5 @@ Insights:
         * Then try `man gdb` again. (also consult https://unix.stackexchange.com/questions/767480/how-do-i-add-line-numbers-to-the-man-page)
         * Line 116: -x <u>file</u> 
         Execute GDB commands from file
-* You can specify line numbers like this: *<source_code>*.c:*<line_number>*
+* **[!]** You can specify line numbers like this: *<source_code>*.c:*<line_number>*
     * This was tricker to track down. https://sourceware.org/gdb/current/onlinedocs/gdb.html/Source-Path.html is a good source and https://alex.dzyoba.com/blog/gdb-source-path/ could be a decent explanation.

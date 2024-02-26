@@ -1,4 +1,4 @@
-# set_breakpoints.gdb
+# set_breakpoints_gpt.gdb
 
 # Start the program
 file main
